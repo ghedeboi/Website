@@ -1,0 +1,115 @@
+/* App.css */
+:root {
+  --background: #141414;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  /*background-image: url('../public/Icons/background.gif');*/
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-size: 50px;
+  background-position: center;
+  position: relative;
+}
+
+.item {
+  flex: 1;
+  margin: 5px;
+  padding-right: 146px;
+  display: flex;
+  flex-direction: column; /* Stack iteml1 and iteml2 vertically */
+  align-items: center;
+  min-height: 0;
+  z-index: 1;
+}
+
+
+.iteml1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1; /* Allow the divs to grow to fill space */
+  flex-shrink: 1; /* Allow the divs to shrink to fit within the container */
+  flex-basis: 50%; /* Base height (can adjust based on preference) */
+  height: 100%;
+  min-height: 0;
+}
+.iteml2{
+  max-height: 100%;
+  flex-grow: 1; /* Allow the divs to grow to fill space */
+  flex-shrink: 1; /* Allow the divs to shrink to fit within the container */
+  flex-basis: 50%; /* Base height (can adjust based on preference) */
+  min-height: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: calc(2vw + 2vh); /* Dynamically scale text size */
+}
+
+.iteml1 > *, .iteml2 > * {
+  flex: 1; /* Allow content to take up available space */
+  width: 100%; /* Ensure content fills the width */
+  height: auto; /* Let height adjust based on content */
+  max-width: 100%; /* Prevent horizontal overflow */
+  box-sizing: border-box; /* Include padding and borders in sizing */
+}
+
+.header_image {
+  max-width: 100%;
+  height: 50%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure image fits within container */
+}
+
+.link_icon img {
+  max-width: 40%; /* Set a max-width for icons */
+  min-width: 0%;
+  max-height: auto; /* Maintain aspect ratio */
+  transition: transform 0.5s ease-in-out;
+}
+
+.link_icon img:hover{
+  transform:scale(1.2);
+  
+}
+
+ul#menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none; 
+  padding-left: 160px;
+}
+
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the image covers the container */
+  z-index: 0;
+  padding-right: 537px;
+}
+
+/* End Header and links */

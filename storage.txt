@@ -1,0 +1,52 @@
+<header>
+          <h1><img src="Icons/HeaderImg.png" alt="header image" class="center"></h1>
+            <ul id="menu">
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/EchoBash logo.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center">
+                  <img src="Icons/Gallery.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/Portfolio.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/YouTube.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/Twitch.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/TikTok.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/Blog Entry.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <img src="Icons/Shop.png">
+                </a>
+              </li>
+              <li>
+                <a href="#" id="menu" class="link_icon center" target="_blank" rel="noopener noreferrer">
+                  <span style="font-size: 20px;">
+                    <img src="Icons/FAQ.png">
+                  </span>
+                </a>
+              </li>
+            </ul>
+        </header>
