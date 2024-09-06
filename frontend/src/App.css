@@ -1,6 +1,6 @@
 /* App.css */
 :root {
-  --background: #141414;
+  --background: #222;
 }
 
 html, body {
@@ -10,26 +10,36 @@ html, body {
   background-color: var(--background);
 }
 
+body {
+  font-family: 'Roboto', sans-serif; /* Example font */
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+}
+
 * {
   box-sizing: border-box;
 }
 
-.App {
+main {
+  padding: 20px;
+}
+
+.App { /* Now includes container styles */
   display: flex;
   flex-direction: column;
   height: 100vh; /* Full viewport height */
   /*background-image: url('../public/Icons/background.gif');*/
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  background-size: 50px;
-  background-position: center;
-  position: relative;
+  width: 100%; /* Ensure full width */
+  height: 100%; /* Ensure full height */
+  padding: 85px; /* Include padding from container */
+  display: flex; /* Include flexbox layout */
+  flex-direction: row; /* Include row direction */
+  background-size: 50px; /* Include background size */
+  background-position: center; /* Include background position */
+  position: relative; /* Include relative positioning */
+  max-width: 100vw;
+  max-height: 100vh;
+  border: 40px solid #222121;
 }
 
 .item {
@@ -37,9 +47,10 @@ html, body {
   margin: 5px;
   padding-right: 146px;
   display: flex;
-  flex-direction: column; /* Stack iteml1 and iteml2 vertically */
+  flex-direction: row; /* Stack iteml1 and iteml2 vertically */
   align-items: center;
   min-height: 0;
+  max-height: 100vh;
   z-index: 1;
 }
 
@@ -55,11 +66,16 @@ html, body {
   min-height: 0;
 }
 .iteml2{
-  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-height: 100vh;
   flex-grow: 1; /* Allow the divs to grow to fill space */
   flex-shrink: 1; /* Allow the divs to shrink to fit within the container */
   flex-basis: 50%; /* Base height (can adjust based on preference) */
   min-height: 0;
+  height: 100vh;
+  
 }
 
 h1 {
@@ -76,17 +92,48 @@ h1 {
   box-sizing: border-box; /* Include padding and borders in sizing */
 }
 
+header {
+  background-color: #222; /* Slightly darker background for header */
+  padding: 20px;
+  z-index: 1;
+}
+
 .header_image {
-  max-width: 100%;
+  max-width: 70%;
   height: 50%; /* Maintain aspect ratio */
   object-fit: contain; /* Ensure image fits within container */
 }
 
+.link_icon {
+  display: flex; /* Enable flexbox layout for centering */
+  justify-content: left; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  width: 450px; /* Ensure the link takes up the full width */
+  height: 100%; /* Ensure the link takes up the full height */
+  flex: 1;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0%;
+}
+
 .link_icon img {
-  max-width: 40%; /* Set a max-width for icons */
-  min-width: 0%;
-  max-height: auto; /* Maintain aspect ratio */
+  max-width: 80%; /* Allow the image to scale to fit the link */
+  max-height: 80%; /* Allow the image to scale to fit the link */
+  object-fit: contain; /* Maintain aspect ratio while scaling */
   transition: transform 0.5s ease-in-out;
+}
+
+.link_icon a img { /* Target images directly within the anchor */
+  max-width: 100%;
+  max-height: 100%;
+  height: 20px;
+  object-fit: contain;
 }
 
 .link_icon img:hover{
@@ -98,18 +145,26 @@ ul#menu {
   display: flex;
   flex-direction: column;
   list-style: none; 
-  padding-left: 160px;
+  padding-left: 0px;
+  justify-content: space-around;
+  flex: 1;
+  max-height: 25vh;
+  height: 100%;
 }
 
-.bgimg {
+.background_image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Make sure the image covers the container */
-  z-index: 0;
-  padding-right: 537px;
+  z-index: 0; /* Ensure background is behind the header */
+  border-radius: 90px;
 }
 
+@media (max-width: 768px) {
+  ul#menu {
+    flex-direction: column; /* Stack menu items vertically */
+  }
+}
 /* End Header and links */
